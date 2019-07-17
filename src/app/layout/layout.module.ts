@@ -1,14 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { HeaderComponent } from './header/header.component';
 
+const LAYOUTS = [
+    HeaderComponent,
+];
 
 
 @NgModule({
     declarations: [
-
+        ...LAYOUTS
     ],
     exports: [
-
+        ...LAYOUTS
     ],
     imports: [
         CommonModule,
@@ -16,15 +20,5 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
     providers: [],
 })
 export class LayoutModule {
-    constructor(
-        @Optional()
-        @SkipSelf()
-        parentModule: LayoutModule
-    ) {
-        if (parentModule) {
-            throw new Error(
-                'LayoutModule is already loaded. Import it in the AppModule only.'
-            );
-        }
-    }
+
 }

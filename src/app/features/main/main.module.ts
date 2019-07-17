@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { LayoutModule } from 'src/app/layout/layout.module';
+import { MaterialModule } from './../../shared/modules/material.module';
 import { MainRoutingModule } from './main-routing.module';
 import { MainView } from './views/main/main.view';
 
@@ -9,6 +11,8 @@ import { MainView } from './views/main/main.view';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
+    LayoutModule,
     MainRoutingModule
   ]
 })

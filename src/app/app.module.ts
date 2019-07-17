@@ -5,7 +5,6 @@ import { AppInitializationModule } from './app-initialization.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { LayoutModule } from './layout/layout.module';
 import { ViewsModule } from './views/views.module';
 
 @NgModule({
@@ -22,7 +21,7 @@ import { ViewsModule } from './views/views.module';
 
     // Core "singleton" modules (not feature modules)
     CoreModule,
-    LayoutModule,
+    // LayoutModule,
     ViewsModule,
 
 

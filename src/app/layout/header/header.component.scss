@@ -1,0 +1,48 @@
+
+
+
+.bd-navbar {
+    min-height: 4rem;
+    background-color: #563d7c;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar-brand {
+    margin-right: 1rem;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.navbar-nav-scroll {
+    width: 100%;
+    overflow: auto;
+}
+
+.profile-image {
+    width: 40px;
+}
+
+@media (min-width: 768px) {
+    .bd-navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1071;
+    }
+
+    .navbar-brand {
+
+        margin-right: 0rem;
+    }
+
+    .flex-md-row {
+        -ms-flex-direction: row !important;
+        flex-direction: row !important;
+    }
+
+}
