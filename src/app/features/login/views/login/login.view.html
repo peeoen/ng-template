@@ -1,3 +1,9 @@
-<p>
-  login works!
-</p>
+<div class="container">
+  <div class="row no-gutters">
+      <div class="col-12 col-sm-12 col-lg-12 login">
+          <app-login [username]="username" [password]="password" [loginFailed]="loginFailed"
+              (clickLoginWithEmail)="loginWithEmail($event)"></app-login>
+      </div>
+
+  </div>
+</div>

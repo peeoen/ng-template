@@ -1,0 +1,28 @@
+<!-- {{loginFailed}} -->
+<div class="login" id="login">
+
+    <form class="form-login">
+      <div class="text-center logo-row">
+          <img src="assets/images/logo/logo.png" alt="">
+      </div>
+
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" id="inputEmail" [(ngModel)]="username"
+          aria-describedby="emailHelp" placeholder="อีเมล์">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" name="password" id="inputPassword" [(ngModel)]="password"
+          aria-describedby="passwordHelp" placeholder="รหัสผ่าน">
+      </div>
+      <span  class="login-failed">
+          <ng-container *ngIf="loginFailed">
+              บัญชีผู่ใช้หรือรหัสผ่านที่คุณป้อนไม่ถูกต้อง
+          </ng-container>
+        </span>
+      <button type="button" class="btn  btn-block btn-login" (click)="loginWithEmail()">เข้าสู่ระบบ</button>
+
+      <div class="text-right forget-pass">
+        ลืมรหัสผ่าน
+      </div>
+    </form>
+</div>
