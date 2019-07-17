@@ -26,6 +26,8 @@ import { ViewsModule } from './views/views.module';
     ViewsModule,
 
 
+    // MainModule,
+
     // routing
     AppRoutingModule,
   ],

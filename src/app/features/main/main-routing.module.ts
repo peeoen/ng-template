@@ -9,8 +9,8 @@ export const routingPaths = {
 
 const routes: Routes = [
     {
-        path: '',
-        component: MainView
+        path: routingPaths.main,
+        component: MainView,
     }
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
 })
-export class LoginRoutingModule {}
+export class MainRoutingModule {}

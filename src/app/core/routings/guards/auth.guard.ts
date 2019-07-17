@@ -10,6 +10,8 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     constructor(private router: Router) { }
 
     async canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        console.log('canActivate');
+
         if (!this.authenticated()) {
 
             this.router.navigate(['/login']);
@@ -19,6 +21,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
     }
 
     async canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+        console.log('canActivateChild');
         if (!this.authenticated()) {
             this.router.navigate(['/login']);
             return false;
