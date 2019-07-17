@@ -1,8 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { AppInitializationModule } from './app-initialization.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { LayoutModule } from './layout/layout.module';
+import { ViewsModule } from './views/views.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +14,20 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+
+    // App initialization module
+    AppInitializationModule,
+
+
+    // Core "singleton" modules (not feature modules)
+    CoreModule,
+    LayoutModule,
+    ViewsModule,
+
+
+    // routing
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
